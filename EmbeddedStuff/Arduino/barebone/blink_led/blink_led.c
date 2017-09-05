@@ -1,6 +1,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <symbol.h>
 
 #define BLINK_DELAY_MS 500
 
