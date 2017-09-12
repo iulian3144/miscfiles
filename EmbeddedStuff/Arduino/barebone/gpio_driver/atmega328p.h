@@ -1,8 +1,10 @@
+/* atmega328p.h - ATmega328p definition header file */
+
+#include <avr/io.h>
 #include <inttypes.h>
 
-/* special function register offset is 0x20 */
-#define __SFR_OFFSET 0x20
 
+/*************************** BEGIN GPIO ***************************/
 typedef struct
 {
     volatile uint8_t IDR;       /* Input Data Register */
@@ -18,3 +20,4 @@ typedef struct
 #define PORTC           ((GPIO_TypeDef *) PORTC_BASE)
 #define PORTD           ((GPIO_TypeDef *) PORTD_BASE)
 
+/**************************** END GPIO ****************************/
