@@ -22,14 +22,16 @@ typedef enum
     INT_RISING_EDGE
 } int_edge_sel_t;
 
-void halGpioInit(GPIO_TypeDef *GPIOx, GPIO_PIN_CONF_T *gpio_pin_conf);
+int halGpioPinInit(GPIO_TypeDef *GPIOx, GPIO_PIN_CONF_T *gpio_pin_conf);
 
-uint8_t halGpioRead(GPIO_TypeDef *GPIOx, uint8_t pin_no);
+int halGpioPinRead(GPIO_TypeDef *GPIOx, uint8_t pin_no);
 
-void halGpioWrite(GPIO_TypeDef *GPIOx, uint8_t pin_no, uint8_t val);
+int halGpioPinWrite(GPIO_TypeDef *GPIOx, uint8_t pin_no, uint8_t val);
 
-void halGpioIntConfig(GPIO_TypeDef *GPIOx, uint8_t pin_no);
+int halGpioPinToggle(GPIO_TypeDef *GPIOx, uint8_t pin_no);
 
-void halGpioIntEnable(GPIO_TypeDef *GPIOx, uint8_t pin_no, uint8_t irq);
+int halGpioExtIntConfig(uint8_t pin_no, int_edge_sel_t edge_sel);
 
-void halGpioIntDisable(GPIO_TypeDef *GPIOx, uint8_t pin_no, uint8_t irq);
+int halGpioExtIntEnable(uint8_t pin_no);
+
+int halGpioExtIntDisable(uint8_t pin_no);

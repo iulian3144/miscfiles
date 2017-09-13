@@ -16,8 +16,8 @@ typedef struct
 #define PORTC_BASE      (__SFR_OFFSET + 0x6)
 #define PORTD_BASE      (__SFR_OFFSET + 0x9)
 
-#define PORTB           ((GPIO_TypeDef *) PORTB_BASE)
-#define PORTC           ((GPIO_TypeDef *) PORTC_BASE)
-#define PORTD           ((GPIO_TypeDef *) PORTD_BASE)
+#define GPIO_PORTB           ((GPIO_TypeDef *) PORTB_BASE)
+#define GPIO_PORTC           ((GPIO_TypeDef *) PORTC_BASE)
+#define GPIO_PORTD           ((GPIO_TypeDef *) PORTD_BASE)
 
 /**************************** END GPIO ****************************/
