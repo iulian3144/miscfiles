@@ -1,0 +1,20 @@
+// Figure 4: Drawing of fancy graph
+
+digraph G {
+    //size = "20,20";
+    main [shape=box];
+    main -> parse [weight=8];
+    parse -> execute;
+    main -> init [style=dotted];
+    main -> cleanup;
+    // edge to make_string and printf
+    execute -> {make_string; printf};
+    init -> make_string;
+    // set edge color to red
+    edge [color=red];
+    main -> printf[style=bold,label="100 times"]
+    make_string [label="make a\nstring"];
+    // set node shape to box, filled and color rgb=(.7, .3, 1.0)
+    node [shape=box,style=filled, color=".7 .3 1.0"];
+    execute -> compare;
+}
