@@ -10,3 +10,8 @@ digraph G {
     main -> printf;
     execute -> compare;
 }
+// undirected graph example
+// graph G1
+// {
+//     test0 -- test1;
+// }
