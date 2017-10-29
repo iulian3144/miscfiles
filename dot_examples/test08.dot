@@ -12,7 +12,7 @@ digraph G {
         node [style=filled];
         b0 -> b1 -> b2 -> b3;
         label = "process #2";
-        color=blue
+        color=blue;
     }
     start -> a0;
     start -> b0;
