@@ -1,6 +1,7 @@
 /* file: gpioLib.h
  * Raspberry Pi 3 GPIO library header file
  */
+#include <stdint.h>
 
 #define BCM2835_PBASE   0x3F000000 /* BCM2835 peripheral base */
 #define GPIO_BASE       0x3F200000 /* GPIO base */
@@ -59,10 +60,6 @@ typedef enum
     GPIO_ALT_FUNC5 = 2
 } GPIO_ALT_FUNC;
 
-typedef enum
-{
-
-} GPIO_;
 
 #define BLOCK_SIZE  4096
 #define PAGE_SIZE   4096
@@ -89,6 +86,6 @@ STATUS gpioPinSetAltFunc(uint32_t pin_no, GPIO_ALT_FUNC altfunc);
 
 STATUS gpioPinSetDir(uint32_t pin_no, uint32_t dir);
 
-STATUS gpioPinSetValue(uint32_t pin_no, uint32_t val);
+STATUS gpioPinSetValue(uint32_t pin_no, uint8_t val);
 
-BOOL gpioPinRead(uint32_t pin_no);
+STATUS gpioPinRead(uint32_t pin_no, uint8_t *val);
