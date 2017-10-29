@@ -18,6 +18,7 @@ STATUS gpioLibInit()
 
     if((fd = open("/dev/mem", O_RDWR | O_SYNC | O_CLOEXEC)) < 0)
     {
+        write(1, "[/dev/gpiomem] ", 15);
         if((fd = open("/dev/gpiomem", O_RDWR | O_SYNC | O_CLOEXEC)) < 0)
         {
             perror("error opening '/dev/mem' or '/dev/gpiomem'!\n");
