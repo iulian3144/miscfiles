@@ -29,7 +29,7 @@ clean:
 
 upload:
 	@echo "Uploading..."
-	@echo "       File: blink_led.hex"
+	@echo "       File: $(HEX_TARGET)"
 	@echo "SERIAL_PORT: $(SERIAL_PORT)"
 	avrdude -F -V -c arduino -p ATMEGA328P -P $(SERIAL_PORT) -b 115200 -U flash:w:$(HEX_TARGET)
 
