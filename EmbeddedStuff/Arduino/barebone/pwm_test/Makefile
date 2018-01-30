@@ -27,7 +27,7 @@ $(TARGET): $(OBJECTS)
 clean:
 	rm -f *.o $(TARGET) $(HEX_TARGET)
 
-upload:
+upload: all
 	@echo "Uploading..."
 	@echo "       File: $(HEX_TARGET)"
 	@echo "SERIAL_PORT: $(SERIAL_PORT)"
